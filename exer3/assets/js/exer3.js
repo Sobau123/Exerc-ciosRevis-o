@@ -8,11 +8,9 @@ function isPrime(number) {
     return true;
 }
 
-// Inicialização de variáveis
 let somaPares = 0;
 let somaPrimos = 0;
 
-// Referências aos elementos HTML
 const numeroInput = document.getElementById("numero");
 const adicionarButton = document.getElementById("adicionar");
 const paresResult = document.getElementById("paresResult");
