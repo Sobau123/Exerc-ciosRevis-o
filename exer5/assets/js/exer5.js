@@ -18,6 +18,13 @@ function calcularInformacoes(){
     peso.push(inPeso.value);
     sexo.push(inSexo.value);
 
+    if(sexo === 'M'){
+        TotalHomens++;
+    }
+    if(sexo === 'F'){
+        TotalMulheres++;
+    }
+
     let lista = "";
     for (let i=0; i<pessoas.length; i++){
         lista += (i+1)+" - "+idade[i]+peso[i]+sexo[i]+"\n";
