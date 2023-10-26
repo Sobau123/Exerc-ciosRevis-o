@@ -18,7 +18,6 @@ const adicionarButton = document.getElementById("adicionar");
 const paresResult = document.getElementById("paresResult");
 const primosResult = document.getElementById("primosResult");
 
-// Evento de clique no botão "Adicionar Número"
 adicionarButton.addEventListener("click", function () {
     const numero = parseFloat(numeroInput.value);
     if (!isNaN(numero)) {
@@ -29,11 +28,9 @@ adicionarButton.addEventListener("click", function () {
             somaPrimos += numero;
         }
 
-        // Atualiza os resultados na página
         paresResult.textContent = `Soma dos números pares: ${somaPares}`;
         primosResult.textContent = `Soma dos números primos: ${somaPrimos}`;
 
-        // Limpa o campo de entrada
         numeroInput.value = '';
     }
 });

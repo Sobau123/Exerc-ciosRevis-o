@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    // Pode Alterar os Dados
     const pessoas = [
         { altura: 1.70, sexo: 'M' },
         { altura: 1.65, sexo: 'F' },
@@ -25,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         let somaAlturaMulheres = 0;
         let numHomens = 0;
 
-        // Seu código de cálculo aqui...
         for (const pessoa of pessoas) {
             const altura = pessoa.altura;
             const sexo = pessoa.sexo;
@@ -48,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
         
         const mediaAlturaMulheres = somaAlturaMulheres / (pessoas.length - numHomens);
         
-        // Atualize os elementos HTML com os resultados
         document.getElementById('maiorAltura').textContent = maiorAltura.toFixed(2);
         document.getElementById('menorAltura').textContent = menorAltura.toFixed(2);
         document.getElementById('mediaAlturaMulheres').textContent = (somaAlturaMulheres / (pessoas.length - numHomens)).toFixed(2);
