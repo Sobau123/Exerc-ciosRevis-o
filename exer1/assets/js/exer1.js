@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Pode Alterar os Dados
     const pessoas = [
         { altura: 1.70, sexo: 'M' },
         { altura: 1.65, sexo: 'F' },
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function calcularInformacoes() {
-        // Variáveis para manter o controle dos cálculos.
         let maiorAltura = Number.MIN_VALUE;
         let menorAltura = Number.MAX_VALUE;
         let somaAlturaMulheres = 0;
@@ -47,15 +45,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
         
-        const mediaAlturaMulheres = somaAlturaMulheres / (pessoas.length - numHomens);
-        
         document.getElementById('maiorAltura').textContent = maiorAltura.toFixed(2);
         document.getElementById('menorAltura').textContent = menorAltura.toFixed(2);
         document.getElementById('mediaAlturaMulheres').textContent = (somaAlturaMulheres / (pessoas.length - numHomens)).toFixed(2);
         document.getElementById('numHomens').textContent = numHomens;
     }
-
-    // Calcula a média de altura das mulheres.
     
     const calcularButton = document.getElementById('calcularButton');
     calcularButton.addEventListener('click', calcularInformacoes);
