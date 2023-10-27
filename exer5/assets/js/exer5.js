@@ -1,47 +1,28 @@
-// Incompleto 
-// Falta Terminar
+let totalHomens = 0;
+let totalMulheres = 0;
+let somaIdadesHomens = 0;
+let somaPesosMulheres = 0;
 
-let pessoas = [];
-let idade = [];
-let peso = [];
-let sexo = ['M', 'F'];
+function adicionarPessoa() {
+  const idade = parseInt(document.getElementById('idade').value);
+  const peso = parseFloat(document.getElementById('peso').value);
+  const sexo = document.getElementById('sexo').value.toLowerCase();
 
-function calcularInformacoes(){
-    let inIdade = document.querySelector("#inIdade");
-    let inPeso = document.querySelector("#inPeso");
-    let inSexo = document.querySelector("#inSexo");
-    let outLista = document.querySelector("#outLista");
-    let TotalHomens = 0;
-    let TotalMulheres = 0;
+  if (sexo === 'm') {
+    totalHomens++;
+    somaIdadesHomens += idade;
+  } else if (sexo === 'f') {
+    totalMulheres++;
+    somaPesosMulheres += peso;
+  }
 
-    idade.push(inIdade.value);
-    peso.push(inPeso.value);
-    sexo.push(inSexo.value);
+  document.getElementById('totalHomens').textContent = totalHomens;
+  document.getElementById('totalMulheres').textContent = totalMulheres;
+  document.getElementById('mediaIdadesHomens').textContent = totalHomens > 0 ? (somaIdadesHomens / totalHomens).toFixed(2) : '0';
+  document.getElementById('mediaPesosMulheres').textContent = totalMulheres > 0 ? (somaPesosMulheres / totalMulheres).toFixed(2) : '0';
 
-    if(sexo === 'M'){
-        TotalHomens++;
-    }
-    if(sexo === 'F'){
-        TotalMulheres++;
-    }
-
-    let lista = "";
-    for (let i=0; i<pessoas.length; i++){
-        lista += (i+1)+" - "+idade[i]+peso[i]+sexo[i]+"\n";
-    }
-    outLista.textContent = lista;
-    inIdade.value="";
-    inIdade.focus();
-    inPeso="";
-    inPeso.focus();
-    inSexo.value="";
-    inSexo.focus();
-
-
-
-
-
+  // Limpar os campos de entrada
+  document.getElementById('idade').value = '';
+  document.getElementById('peso').value = '';
+  document.getElementById('sexo').value = '';
 }
-
-let btCalcular = document.getElementById('btCalcular');
-btCalcular.addEventListener('click', calcularInformacoes);
