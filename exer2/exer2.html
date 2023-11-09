@@ -10,15 +10,15 @@
 
     <div class="container">
         <form id="surveyForm">
-          <label for="age">Idade:</label>
-          <input type="number" id="age" required>
+          <label for="idade">Idade:</label>
+          <input type="number" id="idade" required>
           <label for="opinion">Opinião (ótimo - 3, bom - 2, regular - 1):</label>
           <input type="number" id="opinion" required>
           <button type="button" onclick="submitSurvey()">Registrar Opinião</button>
         </form>
         <div id="results">
-          <p>Média das idades das pessoas que responderam ótimo: <span id="avgAgeOtimo">-</span></p>
-          <p>Quantidade de pessoas que responderam regular: <span id="countRegular">-</span></p>
+          <p>Média das idades das pessoas que responderam ótimo: <span id="mediaIdadeOtimo">-</span></p>
+          <p>Quantidade de pessoas que responderam regular: <span id="qtdeRegular">-</span></p>
           <p>Porcentagem de pessoas que responderam bom: <span id="percentageBom">-</span></p>
         </div>
       </div>
