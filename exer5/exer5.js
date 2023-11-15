@@ -17,7 +17,6 @@ let somaIdadesHomens = 0;
 let somaPesosMulheres = 0;
 
 for (let pessoa of pessoas) {
-    // Verificar o sexo e atualizar as variáveis correspondentes
     if (pessoa.sexo === 'M') {
         totalHomens++;
         somaIdadesHomens += pessoa.idade;
